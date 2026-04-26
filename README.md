@@ -1,6 +1,7 @@
 # 🚀 Dejede LED Control B1300
 
 ![Build](https://github.com/dejede/dejede-led-controlb1300/actions/workflows/build.yml/badge.svg)
+
 Custom LuCI panel untuk GL.iNet B1300 (OpenWrt)
 
 ## ✨ Features
