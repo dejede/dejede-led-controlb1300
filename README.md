@@ -12,6 +12,17 @@ Custom LuCI panel untuk GL.iNet B1300 (OpenWrt)
   <img src="assets/b1300_1.png" width="100%"/>
 </p>
 
+<details>
+<summary>📱 Klik untuk lihat tampilan Mobile</summary>
+
+<br>
+
+<p align="center">
+  <img src="assets/b1300_2.png" width="300"/>
+</p>
+
+</details>
+
 ---
 
 ## ✨ Features
