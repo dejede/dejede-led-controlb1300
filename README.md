@@ -4,6 +4,17 @@
 
 Custom LuCI panel untuk GL.iNet B1300 (OpenWrt)
 
+---
+
+## 🖥️ Preview
+
+<p align="center">
+  <img src="assets/b1300_1.png" width="48%"/>
+  <img src="assets/b1300_2.png" width="48%"/>
+</p>
+
+---
+
 ## ✨ Features
 
 * LED ON / OFF
@@ -20,6 +31,17 @@ Custom LuCI panel untuk GL.iNet B1300 (OpenWrt)
 wget https://raw.githubusercontent.com/dejede/dejede-led-controlb1300/main/install.sh
 chmod +x install.sh
 ./install.sh
+```
+
+---
+
+## ⚡ Clear Cache (Jika Error)
+
+```bash
+sed -i 's/\r$//' /usr/lib/lua/luci/view/dejede/control.htm
+/etc/init.d/uhttpd restart
+/etc/init.d/cron restart
+rm -rf /tmp/luci-*
 ```
 
 ---
@@ -44,6 +66,53 @@ opkg install dejede-control.ipk
 
 * OpenWrt / GL.iNet firmware
 * Akses root
+
+---
+
+## 🛠️ Troubleshooting
+
+### ❌ Panel tidak muncul
+
+```bash
+rm -rf /tmp/luci-*
+/etc/init.d/uhttpd restart
+```
+
+---
+
+### ❌ LED tidak berfungsi
+
+Cek path LED:
+
+```bash
+ls /sys/class/leds/
+```
+
+---
+
+### ❌ Temperature tidak muncul
+
+Beberapa device memiliki path sensor berbeda
+
+---
+
+## 📂 Struktur Project
+
+```
+dejede-led-controlb1300/
+├── Makefile
+├── install.sh
+├── assets/
+│   ├── b1300_1.png
+│   └── b1300_2.png
+└── files/
+    └── usr/
+        └── lib/
+            └── lua/
+                └── luci/
+                    ├── controller/dejede/control.lua
+                    └── view/dejede/control.htm
+```
 
 ---
 
